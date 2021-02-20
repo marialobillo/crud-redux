@@ -8,7 +8,28 @@ import {
 
 // Create new products
 export function createNewProductAction(product) {
-    return () => {
-        console.log('from action', product);
+    return (dispatch) => {
+        dispatch( addProduct() );
+
+        try {
+            dispatch( addProductSuccess(product) ); 
+        } catch (error) {
+            dispatch( addProductError(true) );
+        }
     }
 }
+
+const addProduct = () => ({
+    type: ADD_PRODUCT,
+    payload: true
+});
+
+
+// if product is saved in db
+const addProductSuccess = product => ({
+    type: ADD_PRODUCT_SUCCESS,
+    payload: product
+})
+
+// if happen any errors
+const addProductError = () => {}

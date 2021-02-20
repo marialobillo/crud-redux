@@ -14,7 +14,17 @@ const initialState = {
 
 export default function(state = initialState, action){
     switch(action.type) {
-        
+        case ADD_PRODUCT:
+            return {
+                ...state, 
+                loading: action.payload
+            }
+        case ADD_PRODUCT_SUCCESS:
+            return {
+                ...state, 
+                loading: false,
+                products: [...state.products, action.payload]
+            }
 
         default:
             return state;
