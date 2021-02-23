@@ -1,29 +1,34 @@
 {
-    "products": [
-      {
-        "id": 1,
-        "nombre": "Carrot Juice",
-        "precio": "311"
-      },
-      {
-        "id": 2,
-        "nombre": "Orange Juice",
-        "precio": "1"
-      },
-      {
-        "nombre": "Red Wine",
-        "precio": "300",
-        "id": 3
-      },
-      {
-        "nombre": "Rib Eye 800g",
-        "precio": "200",
-        "id": 4
-      },
-      {
-        "nombre": "Tomato Juice",
-        "precio": "200",
-        "id": 5
-      }
-    ]
-  }
+  "products": [
+    {
+      "id": 1,
+      "nombre": "Carrot Juice",
+      "precio": "311"
+    },
+    {
+      "id": 2,
+      "nombre": "Orange Juice",
+      "precio": "1"
+    },
+    {
+      "nombre": "Red Wine",
+      "precio": "300",
+      "id": 3
+    },
+    {
+      "nombre": "Rib Eye 800g",
+      "precio": "200",
+      "id": 4
+    },
+    {
+      "nombre": "Tomato Juice",
+      "precio": "200",
+      "id": 5
+    },
+    {
+      "name": "Banana Bread",
+      "price": 30,
+      "id": 6
+    }
+  ]
+}

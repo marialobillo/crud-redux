@@ -6,14 +6,21 @@ import {
     ADD_PRODUCT_ERROR
 } from './../types';
 
+import AxiosClient from './../config/axios';
+
 // Create new products
 export function createNewProductAction(product) {
-    return (dispatch) => {
+    return async (dispatch) => {
         dispatch( addProduct() );
 
         try {
+            // insert on API
+            await AxiosClient.post('/products', product);
+            // update the state
             dispatch( addProductSuccess(product) ); 
         } catch (error) {
+            console.log(error);
+            // change state if there is an error
             dispatch( addProductError(true) );
         }
     }
